@@ -6,7 +6,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm ci
+RUN npm install
 
 # Copy app source
 COPY . .
@@ -16,3 +16,4 @@ EXPOSE 3000
 
 # Start application
 CMD [ "node", "index.js" ]
+
